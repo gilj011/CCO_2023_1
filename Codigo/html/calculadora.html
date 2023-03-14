@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h2>Se interessou no nosso projeto?</h2>
+    <p>Calcule aqui o percentual de aumento de lucro!</p>
+
+    Quantos corredores seu supermercado possui? <input id="ipt_corredoresTotais"><br><br>
+    Em quantos corredores você deseja instalar? <input id="ipt_corredoresInstalados"><br><br>
+    Qual seu lucro mensal? <input id="ipt_lucro"><br><br>
+    <button id="btn_calcular" onclick="calcular()">Calcular aumento de lucro</button><br>
+    <p id="p_retorno"></p>
+</body>
+</html>
+
+<script>
+
+    function calcular() {
+
+        var corredoresTotais = Number(ipt_corredoresTotais.value);
+        var corredoresInstalados = Number(ipt_corredoresInstalados.value);
+        var lucro = Number(ipt_lucro.value)
+
+
+        if (corredoresTotais == corredoresInstalados) {
+            
+            p_retorno.innerHTML = `Seu lucro aumentará em até 30%, chegando em R$${lucro+(lucro*0.3)} mensais.`
+
+        }
+
+        if (corredoresTotais != corredoresInstalados) {
+            
+        var porcLucro = (corredoresInstalados*0.3)/corredoresTotais 
+
+        p_retorno.innerHTML = `Seu lucro aumentará em até ${porcLucro*100}%, chegando em R$${lucro+(lucro*porcLucro)} mensais.<br>`
+        p_retorno.innerHTML += `Caso instalasse em todos os corredores, seu lucro aumentaria em até 30%, chegando em R$${lucro+(lucro*0.3)} mensais.`
+
+            
+        }
+        
+    }
+
+</script>
