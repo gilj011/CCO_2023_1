@@ -62,7 +62,7 @@ body{
     margin-left: 80px;
     background-color:#08283B;
     width: 807px;
-height: 490px;
+height: 550px;
 border-radius: 20px;
 }
 .container text {
@@ -121,7 +121,7 @@ font-family: 'News Cycle', sans-serif;
 }
 .resul {
     width:752px;
-    height:117px;
+    height:190px;
     background-color: #F4F2F3;
  margin-left: 28px;
    display: flex    ;
@@ -135,5 +135,7 @@ input{
     
 }
 #p_retorno{
-    color: rgb(138, 196, 52);
+    color: rgb(65, 109, 0);
+    font-size: 25px;
+    font-weight: bold;
 }
